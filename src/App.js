@@ -1,23 +1,29 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import logo from './logo.svg';
+import Landing from './Landing';
+import Navigation from './Navigation';
 
-const Navigation = () =>{
-  return(
-    <nav className="nav">
-      <h1>HOME</h1>
-      <h1>LISTEN</h1>
-      <h1>EVENTS</h1>
-      <h1>RESUME</h1>
-      <h1>CONTACT</h1>
-    </nav>
-  )
-}
+import './Landing.css'
+import './App.css';
+// import Bio from './Bio';
+
+
+
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      page : "home"
+    }
+  }
   render() {
     return (
-      <Navigation />
+      <div>
+        <Landing />
+        <Navigation />
+        some text
+      </div>
     );
   }
 }
