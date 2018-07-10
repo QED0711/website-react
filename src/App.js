@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
-import Landing from './Landing';
+import Landing from './Components/Landing';
 import Navigation from './Navigation';
+import Home from "./Home"
+import Listen from "./Components/Listen";
 
 import './App.css';
 // import './Landing.css'
@@ -66,8 +68,8 @@ class App extends Component {
           contact={this.pageContact}
         />
         <div id="content">
-          {this.state.page === "home" && <h1 style={{textAlign: "center"}}>HOME</h1>} 
-          {this.state.page === "listen" && <h1 style={{textAlign: "center"}}>LISTEN</h1>} 
+          {this.state.page === "home" && <Home />} 
+          {this.state.page === "listen" && <Listen />} 
           {this.state.page === "events" && <h1 style={{textAlign: "center"}}>EVENTS</h1>} 
           {this.state.page === "resume" && <h1 style={{textAlign: "center"}}>RESUME</h1>} 
           {this.state.page === "contact" && <h1 style={{textAlign: "center"}}>CONTACT</h1>} 

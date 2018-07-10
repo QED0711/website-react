@@ -1,0 +1,79 @@
+.pageNavigation{
+    display: grid;
+    grid-template: 1fr, repeat(5, 1fr);
+    grid-template-areas: 
+    "home listen events resume contact";
+  
+    max-width: 1500px;
+  
+    margin: 0 auto;
+  
+    background-color: var(--nav-bg);
+    padding: 10px;
+  
+    text-align: center;
+    color: var(--head-color);
+    letter-spacing: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+  
+    box-shadow: 0 2px rgb(37, 37, 37);
+  }
+  
+  .navEntry{
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+  
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .navEntry:hover{
+    animation-name: navMouse;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes navMouse{
+    0% {
+      background-color: var(--nav-color-start);
+    }
+    100%{
+      background-color: var(--nav-color-end);
+      /* border: 1px solid whiteSmoke; */
+      box-shadow: 0 0 0 1px whiteSmoke; /* All the borders by using the spread properties */
+      font-weight: 900;
+    }
+  }
+  
+  @media only screen and (max-width: 700px){
+    .pageNavigation{
+      font-size: 10px; 
+    }
+  }
+  
+  @media only screen and (max-width: 475px){
+    .pageNavigation{
+      font-size: 6px; 
+      letter-spacing: 3px;
+    }
+  }
+  
+  #content{
+    max-width: 1500px;
+    margin: 0 auto;
+    margin-top: 0px;
+    margin-right: auto; 
+    margin-left: auto;
+    margin-bottom: 50px;
+    padding: 10px;
+  
+    background-color: white; 
+  
+    box-shadow: 2px 2px 5px rgb(37, 37, 37);
+  }

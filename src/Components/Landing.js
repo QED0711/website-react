@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import MainImage from "./MainImage.jpg";
+import MainImage from "../Content/MainImage.jpg";
+
+// import "Landing.css";
 
 class Landing extends Component {
     render(){
